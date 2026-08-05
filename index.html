@@ -5,76 +5,200 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NovaNest</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-body{
+
+*{
 margin:0;
-font-family:Arial,sans-serif;
-background:#0f172a;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#08111f;
 color:white;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#0d1728;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:30px;
+font-weight:700;
+color:#4f8cff;
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+}
+
+.hero{
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+flex-direction:column;
 text-align:center;
+padding:20px;
 }
 
-header{
-padding:80px 20px;
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
 }
 
-h1{
-font-size:48px;
+.hero p{
+font-size:22px;
+color:#b6c2d9;
+max-width:700px;
 }
 
-p{
-font-size:20px;
-color:#cbd5e1;
-}
-
-button{
+.btn{
+margin-top:35px;
+padding:16px 40px;
 background:#2563eb;
+border-radius:12px;
+text-decoration:none;
 color:white;
-border:none;
-padding:15px 35px;
 font-size:18px;
-border-radius:10px;
-cursor:pointer;
-margin-top:20px;
 }
 
-button:hover{
-background:#1d4ed8;
-}
-
-section{
-padding:60px 20px;
+.products{
+padding:80px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
 }
 
 .card{
-background:#1e293b;
+background:#111d33;
+border-radius:20px;
 padding:25px;
-margin:20px auto;
-max-width:350px;
-border-radius:15px;
+transition:.3s;
 }
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.price{
+font-size:30px;
+font-weight:bold;
+margin:20px 0;
+color:#4f8cff;
+}
+
+.buy{
+display:inline-block;
+background:#2563eb;
+padding:12px 30px;
+border-radius:10px;
+color:white;
+text-decoration:none;
+}
+
+footer{
+padding:50px;
+text-align:center;
+background:#0d1728;
+margin-top:60px;
+}
+
 </style>
 
 </head>
 
 <body>
 
-<header>
-<h1>NovaNest</h1>
-<p>Premium Digital Products</p>
-<button>Shop Now</button>
-</header>
+<nav>
 
-<section>
+<div class="logo">
+NovaNest
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Products</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>Digital Products That Make Life Easier</h1>
+
+<p>Create, Learn and Organize your life with premium digital planners, templates and tools.</p>
+
+<a class="btn" href="#shop">Explore Store</a>
+
+</section>
+
+<section class="products" id="shop">
 
 <div class="card">
+
 <h2>Ultimate Student Planner</h2>
-<p>Organize your study and reach your goals.</p>
-<h3>$9.99</h3>
-<button>Buy Now</button>
+
+<p>100+ Pages PDF + Canva</p>
+
+<div class="price">$9.99</div>
+
+<a class="buy" href="#">Buy Now</a>
+
+</div>
+
+<div class="card">
+
+<h2>Budget Planner</h2>
+
+<p>Manage your money professionally</p>
+
+<div class="price">$7.99</div>
+
+<a class="buy" href="#">Buy Now</a>
+
+</div>
+
+<div class="card">
+
+<h2>Habit Tracker</h2>
+
+<p>Build better habits every day</p>
+
+<div class="price">$5.99</div>
+
+<a class="buy" href="#">Buy Now</a>
+
 </div>
 
 </section>
 
+<footer>
+
+<h2>NovaNest</h2>
+
+<p>Premium Digital Products Store © 2026</p>
+
+</footer>
+
 </body>
 </html>
+
